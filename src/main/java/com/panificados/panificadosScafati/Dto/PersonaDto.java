@@ -14,7 +14,9 @@ public class PersonaDto {
    @NotBlank
    private String direccion;
    @NotBlank
-    private String sobre_nosotros;
+   private String imagen;
+   @NotBlank
+    private String descripcion;
 
    //constructores
 
@@ -22,16 +24,19 @@ public class PersonaDto {
     public PersonaDto() {
     }
 
-    public PersonaDto(String nombre, String apellido, String email, String telefono, String direccion, String sobre_nosotros) {
+    public PersonaDto(String nombre, String apellido, String email, String telefono, String direccion, String imagen, String descripcion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.telefono = telefono;
         this.direccion = direccion;
-        this.sobre_nosotros = sobre_nosotros;
+        this.imagen = imagen;
+        this.descripcion = descripcion;
     }
 
     //getters y setters
+
+
 
     public String getNombre() {
         return nombre;
@@ -73,12 +78,21 @@ public class PersonaDto {
         this.direccion = direccion;
     }
 
-    public String getSobre_nosotros() {
-        return sobre_nosotros;
+    public String getImagen() {
+        return imagen;
     }
 
-    public void setSobre_nosotros(String sobre_nosotros) {
-        this.sobre_nosotros = sobre_nosotros;
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
 }
 
